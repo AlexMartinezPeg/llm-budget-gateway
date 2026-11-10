@@ -1,0 +1,17 @@
+{
+  "tiers": {
+    "cheap":    ["provider/cheap-model", "provider/cheap-backup"],
+    "balanced": ["provider/balanced-model", "provider/balanced-backup"],
+    "vision":   ["provider/vision-model"]
+  },
+  "free_models": ["provider/some-model:free", "provider/another-model:free"],
+  "free_fallback": true,
+  "free_allow_data_collection": false,
+  "provider": {"sort": "price"},
+  "vision_tier": "vision",
+  "outage_fallback": {
+    "base_url": "https://your-openai-compatible-provider.example/v1",
+    "api_key_env": "OUTAGE_API_KEY",
+    "models": ["your-fallback-model"]
+  }
+}
